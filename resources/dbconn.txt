@@ -1,0 +1,4 @@
+host_name=http://192.168.35.152:5496/cafepro,
+db_url=jdbc:mysql://192.168.35.152/cafe_pro?useCursorFetch=true,
+user_name=root,
+password=root123,

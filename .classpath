@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Cafepro/src"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="img"/>
+	<classpathentry kind="src" output="resources" path="resources"/>
+	<classpathentry exported="true" kind="lib" path="okhttp-urlconnection-3.8.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="java-json.jar"/>
+	<classpathentry exported="true" kind="lib" path="jgoodies-forms-1.8.0.jar" sourcepath="jgoodies-forms-1.8.0-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="jcalendar-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="commons-digester-1.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="commons-logging-1.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="commons-collections-3.2.1-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="commons-beanutils-1.8.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="groovy-all-2.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="jasperreports-5.6.0.jar" sourcepath="jasperreports-5.6.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="sqljdbc42.jar"/>
+	<classpathentry exported="true" kind="lib" path="mysql-connector-java-5.1.47.jar"/>
+	<classpathentry exported="true" kind="lib" path="poi-3.9.jar"/>
+	<classpathentry kind="lib" path="jssc.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="rxtxcomm.jar"/>
+	<classpathentry exported="true" kind="lib" path="barcode4j-2.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="miglayout15-swing.jar" sourcepath="miglayout-src.zip"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
