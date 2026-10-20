@@ -9227,7 +9227,7 @@ public class posscreen {
 				btnduplicateBill.setEnabled(false);
 				//Runtime.getRuntime().exec(new String[] {"cmd","/c","cls>"+display_port+"\""});
 				manager_name=username;
-				new duplicate_invoice(company,username,store_name,reg_nme,printer, version,Integer.toString(decimalPlaces));
+				//new duplicate_invoice(company,username,store_name,reg_nme,printer, version,Integer.toString(decimalPlaces));
 				//Runtime.getRuntime().exec(new String[] {"cmd","/c","ECHO "+posscreen.ready_msg1+""+posscreen.ready_msg2+">"+display_port+"\""});
 				Runtime.getRuntime().exec("cmd /c \"CLS>"+display_port+"&&ECHO "+posscreen.ready_msg1+">"+display_port+"&&ECHO "+posscreen.ready_msg2+">"+display_port+"\"");
 				//get_user_validate_dt( company, username,store_name,posreg);
