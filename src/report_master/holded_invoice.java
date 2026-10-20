@@ -92,7 +92,7 @@ public class holded_invoice {
 				JasperReport jr= JasperCompileManager.compileReport(jd);
 				JasperPrint jp=JasperFillManager.fillReport(jr, param,con);
 				
-				if(type.equals("DUP"))
+				if(type.equals(""))//DUP
 				{
 					JasperViewer.viewReport(jp,false);
 				}

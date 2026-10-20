@@ -1167,6 +1167,14 @@ public class Cust_Chooser {
     		Item_history.textField_1.setText(table.getModel().getValueAt(rows, 1).toString());
     		Item_history.frame.setAlwaysOnTop(false);
     	}
+    	else if(page_type.equals("cust_chooser"))
+    	{
+    		RestaurantPOS.lblCustCode=table.getModel().getValueAt(rows, 0).toString();
+    		RestaurantPOS.lblCustName.setText(table.getModel().getValueAt(rows, 1).toString());
+    		RestaurantPOS.lblCustPhone.setText(table.getModel().getValueAt(rows, 3).toString());
+    		RestaurantPOS.lblCustBalance.setText(table.getModel().getValueAt(rows, 6).toString());
+    		
+    	}
     	else
     	{
     		sales_master.Customer_master.cust_disp( company, value);	

@@ -352,31 +352,61 @@ public class delivery_customer {
 		}
 		else
 		{
-			sales_master.posscreen.btnNewButton.setText(table.getModel().getValueAt(rows, 1).toString());
-			sales_master.posscreen.textField_6.setText(table.getModel().getValueAt(rows,4).toString());
-			if(posscreen.CustDisc.equals("1"))
+			if(page_type.equals("cust_chooser"))
+	    	{
+				if (rows >= 0) {
+				    int modelRow = table.convertRowIndexToModel(rows);
+
+				    String custCode = table.getModel().getValueAt(modelRow, 0).toString();
+				    String custName = table.getModel().getValueAt(modelRow, 1).toString();
+				    String custPhone = table.getModel().getValueAt(modelRow, 2).toString();
+				    String custBalance = table.getModel().getValueAt(modelRow, 4).toString();
+
+				    sales_master.RestaurantPOS pos =
+				        sales_master.RestaurantPOS.getCurrent();
+
+				    if (pos != null) {
+				        pos.setCustomer(
+				            custCode,
+				            custName,
+				            custBalance,
+				            custPhone
+				        );
+				    }
+				}
+	    		
+	    	}
+			else
 			{
-				sales_master.posscreen.textField_7.setText(table.getModel().getValueAt(rows,5).toString());
-				sales_master.posscreen.lblNewLabel_2.setText(table.getModel().getValueAt(rows,5).toString()+"%");
-			}
-			sales_master.posscreen.textField_12.setText(table.getModel().getValueAt(rows,2).toString());
-			sales_master.posscreen.textField_9.setText(table.getModel().getValueAt(rows,0).toString());
-			if(posscreen.table.getRowCount()!=0)
-			{
-				posscreen.disc_perc(company, username,store_name,posscreen.reg_nme, table.getModel().getValueAt(rows,5).toString(),"CUST");	
-			}
-			
-			
-			if(page_type.equals("hold_select"))
-			{
-				posscreen.page_type="Kitchen KOT";
-				posscreen.hold_inv=true;
-				posscreen.hold_inv(company, username,store_name, posreg, con,"HOME DELIVERY",version,"","HOME DELIVERY",posscreen.textField_8.getText(),"0");
+				sales_master.posscreen.btnNewButton.setText(table.getModel().getValueAt(rows, 1).toString());
+				sales_master.posscreen.textField_6.setText(table.getModel().getValueAt(rows,4).toString());
+				if(posscreen.CustDisc.equals("1"))
+				{
+					sales_master.posscreen.textField_7.setText(table.getModel().getValueAt(rows,5).toString());
+					sales_master.posscreen.lblNewLabel_2.setText(table.getModel().getValueAt(rows,5).toString()+"%");
+				}
+				sales_master.posscreen.textField_12.setText(table.getModel().getValueAt(rows,2).toString());
+				sales_master.posscreen.textField_9.setText(table.getModel().getValueAt(rows,0).toString());
+				if(posscreen.table.getRowCount()!=0)
+				{
+					posscreen.disc_perc(company, username,store_name,posscreen.reg_nme, table.getModel().getValueAt(rows,5).toString(),"CUST");	
+				}
 				
+				
+				if(page_type.equals("hold_select"))
+				{
+					posscreen.page_type="Kitchen KOT";
+					posscreen.hold_inv=true;
+					posscreen.hold_inv(company, username,store_name, posreg, con,"HOME DELIVERY",version,"","HOME DELIVERY",posscreen.textField_8.getText(),"0");
+					
+				}
+				
+		    	posscreen.btnNewButton.setEnabled(true);
+		    	posscreen.textField_9.setEnabled(true);
 			}
 			
-	    	posscreen.btnNewButton.setEnabled(true);
-	    	posscreen.textField_9.setEnabled(true);
+			
+			
 		}
 		
 	}

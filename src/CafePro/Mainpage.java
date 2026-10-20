@@ -131,7 +131,7 @@ public class Mainpage {
 			@SuppressWarnings("unused")
 			public void run() {
 				try {
-					Mainpage window = new Mainpage("AL SAFI GENERAL TRADING LLC","127.0.0.1","admin","S01","mr_pro","S0101","1.01","2","1","1","English");
+					Mainpage window = new Mainpage("AL SAFI GENERAL TRADING LLC","127.0.0.1","CASHIER","S01","mr_pro","S0101","1.01","2","1","1","English");
 					Mainpage.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -818,7 +818,12 @@ public class Mainpage {
 									}
 									else
 									{
-										new sales_master.posscreen(company,db_name, username,store_name,posreg, version,server,decimal,con1,language);
+										//new sales_master.RestaurantPOS(company,db_name, username,store_name,posreg, version,server,decimal,con1,language);
+
+										sales_master.RestaurantPOS pos =new sales_master.RestaurantPOS(company, db_name, username, store_name, posreg, version, server, decimal, con1, language);
+										pos.setVisible(true);
+
+										//new sales_master.posscreen(company,db_name, username,store_name,posreg, version,server,decimal,con1,language);
 									}
 									
 									btnSales.setEnabled(false);

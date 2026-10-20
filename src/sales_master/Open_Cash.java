@@ -298,7 +298,9 @@ public class Open_Cash {
 								}
 								else
 								{
-									new sales_master.posscreen(db_name,company, username,store_name,posreg, version,server,decimal,con1,language);	
+									sales_master.RestaurantPOS pos =new sales_master.RestaurantPOS(company, db_name, username, store_name, posreg, version, server, decimal, con1, language);
+									pos.setVisible(true);
+									//new sales_master.posscreen(db_name,company, username,store_name,posreg, version,server,decimal,con1,language);	
 								}
 								
 								Mainpage.btnSales.setEnabled(false);

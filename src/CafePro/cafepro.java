@@ -31,7 +31,7 @@ public class cafepro {
 	    private JProgressBar progressBar;
 	    private JLabel label_2;
 	    private JLabel lblCopyrightAl;
-	    private String Version = "MR Ver_1.2.17";//check itemmaster qty update in closing 2484 to 2501
+	    private String Version = "MR Ver_1.2.1";//check itemmaster qty update in closing 2484 to 2501
 	/**
 	 * Launch the application.
 	 */

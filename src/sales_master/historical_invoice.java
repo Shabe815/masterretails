@@ -135,8 +135,8 @@ public class historical_invoice {
 				}
 				else
 				{
-					posscreen.txtDisc.requestFocus();
-					posscreen.btnhistInvoice.setEnabled(true);
+					//posscreen.txtDisc.requestFocus();
+					//posscreen.btnhistInvoice.setEnabled(true);
 				}
 			}
 			@Override
@@ -621,8 +621,8 @@ public class historical_invoice {
 				}
 				else
 				{
-					posscreen.txtDisc.requestFocus();
-					posscreen.btnhistInvoice.setEnabled(true);
+					//posscreen.txtDisc.requestFocus();
+					//posscreen.btnhistInvoice.setEnabled(true);
 				}
 				
 			}

@@ -228,24 +228,37 @@ public class create_new_cust {
 								}
 								else
 								{
-									sales_master.posscreen.btnNewButton.setText(name);
-						    		if(posscreen.gs.length>1)
-									{
-						    		sales_master.SecondDisplay.btnNewButton.setText(name);
-									}
-									sales_master.posscreen.textField_6.setText("0");
-									if(posscreen.CustDisc.equals("1"))
-					    			{
-					    				sales_master.posscreen.textField_7.setText("0");
-					    				sales_master.posscreen.lblNewLabel_2.setText("0%");
-					    			}
-					    			
-					    			sales_master.posscreen.textField_9.setText(code);
-					    			sales_master.posscreen.textField_12.setText(ph1);
-					    			if(posscreen.table.getRowCount()!=0)
-					    			{
-					    				posscreen.disc_perc(company, username,store_name,posscreen.reg_nme, "0","CUST");	
-					    			}
+//									sales_master.posscreen.btnNewButton.setText(name);
+//						    		if(posscreen.gs.length>1)
+//									{
+//						    		sales_master.SecondDisplay.btnNewButton.setText(name);
+//									}
+//									sales_master.posscreen.textField_6.setText("0");
+//									if(posscreen.CustDisc.equals("1"))
+//					    			{
+//					    				sales_master.posscreen.textField_7.setText("0");
+//					    				sales_master.posscreen.lblNewLabel_2.setText("0%");
+//					    			}
+//					    			
+//					    			sales_master.posscreen.textField_9.setText(code);
+//					    			sales_master.posscreen.textField_12.setText(ph1);
+//					    			if(posscreen.table.getRowCount()!=0)
+//					    			{
+//					    				posscreen.disc_perc(company, username,store_name,posscreen.reg_nme, "0","CUST");	
+//					    			}
+									
+									sales_master.RestaurantPOS pos =
+									        sales_master.RestaurantPOS.getCurrent();
+
+									    if (pos != null) {
+									        pos.setCustomer(
+									        		code,
+									            name,
+									            "0",
+									            ph1
+									        );
+									    }
+									
 								}
 								
 								
@@ -254,13 +267,14 @@ public class create_new_cust {
 							
 							
 							delivery_customer.frame.setVisible(false);
+							frame.setVisible(false);
 							if(Mainpage.SoftLang.equals("Ar"))
 							{
 								PosscreenArabic.btnNewButton.setEnabled(true);
 							}
 							else
 							{
-								posscreen.btnNewButton.setEnabled(true);
+								//posscreen.btnNewButton.setEnabled(true);
 							}
 							
 						}
